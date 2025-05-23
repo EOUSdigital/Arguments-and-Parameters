@@ -26,13 +26,27 @@
 //! Solution
 
 function logExpenses(user = "Anonymous", ...categories) {
-    if (categories.length === 0) {
-        console.log(`${user} has no expense categories to review.`);
-    }   else if (categories.length === 1) {
-        console.log(`${user} has 1 expense category: ${categories[0]}.`);
-    }   else {
-        console.log(`${user} has ${categories.length} expense categories: ${categories.join(', ')}.`);
+    console.log(`Function was called with ${arguments.length} arguments`);
+
+    let warned = false;
+    for (let i = 0; i < categories.length; i++) {
+        if (typeof categories[i] !== 'string') {
+            if (warned === false) {
+                console.warn("Warning: All categories should be strings.");
+                warned = true;
+            }
+        }
     }
+
+    
+    if (categories.length === 0) {
+        return `${user} has no expense categories to review.`;
+    }   else if (categories.length === 1) {
+        return `${user} has 1 expense category: ${categories[0]}.`;
+    }   else {
+        return `${user} has ${categories.length} expense categories: ${categories.join(', ')}.`;
+    }
+
 }
 
 //? Output
