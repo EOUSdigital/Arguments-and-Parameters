@@ -1,0 +1,68 @@
+//TODO  💻 Challenge: "Dynamic Budget Tracker"
+
+//  🧩 Scenario:
+//  We are tasked with creating a budgeting utility for a simple finance dashboard. This utility function will allow users to track expenses across various categories and provide summary messages based on input.
+
+//? 🎯 Function Requirements
+//  🔹 Function Name:           logExpenses
+
+//? 🔹 Parameters:
+//  1. name (string)
+//  • Represents the name of the user.
+//  • Use a default value (e.g., "Anonymous") if no name is passed.
+//  2. ...categories (rest parameter)
+//  • Accepts an unlimited number of category strings (e.g., "groceries", "transportation", "utilities").
+//  • These represent the types of expenses being tracked.
+
+//? 🔹 Inside the Function:
+//  You must implement conditional logic that handles these use cases:
+//  1. If no categories are passed:
+//  • Log a message like: "Anonymous has no expense categories to review."
+//  2. If only one category is passed:
+//  • Log a message like: "Sam has 1 expense category: groceries."
+//  3. If multiple categories are passed:
+//  • Log a message like: "Jordan has 3 expense categories: groceries, transportation, entertainment."
+
+//! Solution
+
+function logExpenses(user = "Anonymous", ...categories) {
+    if (categories.length === 0) {
+        console.log(`${user} has no expense categories to review.`);
+    }   else if (categories.length === 1) {
+        console.log(`${user} has 1 expense category: ${categories[0]}.`);
+    }   else {
+        console.log(`${user} has ${categories.length} expense categories: ${categories.join(', ')}.`);
+    }
+}
+
+//? Output
+
+logExpenses();                                                  // Anonymous has no expense categories to review.
+logExpenses("Taylor");                                          // Taylor has no expense categories to review.
+logExpenses("Jordan", "groceries");                             // Jordan has 1 expense category: groceries.
+logExpenses("Riley", "groceries", "rent", "utilities");         // Riley has 3 expense categories: groceries, rent, utilities.
+
+
+------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
