@@ -37,7 +37,6 @@ function logExpenses(user = "Anonymous", ...categories) {
             }
         }
     }
-
     
     if (categories.length === 0) {
         return `${user} has no expense categories to review.`;
@@ -46,7 +45,6 @@ function logExpenses(user = "Anonymous", ...categories) {
     }   else {
         return `${user} has ${categories.length} expense categories: ${categories.join(', ')}.`;
     }
-
 }
 
 //? Output
