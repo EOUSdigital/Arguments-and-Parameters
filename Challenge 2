@@ -54,6 +54,7 @@ logExpenses("Taylor");                                          // Taylor has no
 logExpenses("Jordan", "groceries");                             // Jordan has 1 expense category: groceries.
 logExpenses("Riley", "groceries", "rent", "utilities");         // Riley has 3 expense categories: groceries, rent, utilities.
 
+console.log(logExpenses("Warning: All categories should be strings."));
 
 ------------------------------------------------------------------------------------------------------
 
